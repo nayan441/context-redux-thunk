@@ -1,17 +1,13 @@
 import React, { useState, createContext } from 'react'
-import Dashboard from './Components/ContextApiExample/Dashboard';
-import { UserProvider } from './Components/ContextApiExample/MyContext';
+import CounterComponent from './Components/Redux/CounterComponent';
+import Home from './pages/Home/Home';
 function App() {
   
 
 
   return (
     <div className="app">
-      <p> Component     App</p>
-      <h1>Welcome</h1>
-      <UserProvider>
-      <Dashboard  />
-      </UserProvider>
+      <CounterComponent/>
     </div>
   )
 }
