@@ -1,22 +1,18 @@
-import { useState, createContext} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { MyContext } from './Components/MyContext'
-import CreateStore from './Components/CreateStore'
-import CreateStore02 from './Components/CreateStore02'
-
+import React, { useState, createContext } from 'react'
+import Dashboard from './Components/ContextApiExample/Dashboard';
+import { UserProvider } from './Components/ContextApiExample/MyContext';
 function App() {
-  const [count, setCount] = useState(7)
+  
+
 
   return (
-    <>
-      <MyContext.Provider  value={{count, setCount}}>
-        <CreateStore/>
-        <CreateStore02/>
-      </MyContext.Provider>
-    </>
+    <div className="app">
+      <p> Component     App</p>
+      <h1>Welcome</h1>
+      <UserProvider>
+      <Dashboard  />
+      </UserProvider>
+    </div>
   )
 }
-
-export default App
+export default App;
